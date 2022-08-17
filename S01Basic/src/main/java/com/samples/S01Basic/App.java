@@ -17,9 +17,12 @@ public class App
 //    	 Carservice carser =(Carservice) springContainer.getBean("carser"); 
 //         System.out.println(carser);
 //         
-
-    	 Customer customer =(Customer) springContainer.getBean("customer"); 
-         System.out.println(customer);
+//
+//    	 Customer customer =(Customer) springContainer.getBean("customer"); 
+//         System.out.println(customer);
+    	 
+    	 Shoppingcart shoppingcart=(Shoppingcart) springContainer.getBean("shoppingcart");
+    	 System.out.println(shoppingcart);
          
          
     }

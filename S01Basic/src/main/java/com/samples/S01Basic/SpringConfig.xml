@@ -43,5 +43,10 @@
 		</property>
 	</bean>
 
+	<bean name="iteam" class="com.samples.S01Basic.Iteam" p:id="1"
+		p:name="mouse" p:price="1000.0" p:quantity="1" />
+	<bean name="shoppingcart"
+		class="com.samples.S01Basic.Shoppingcart" p:iteam-ref="iteam" />
+
 
 </beans>
