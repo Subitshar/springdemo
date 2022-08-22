@@ -1,4 +1,4 @@
-package com.samples.S01Basic;
+package com.samples.S01Basic.scopes;
 
 public class Employee {
 	private int id;

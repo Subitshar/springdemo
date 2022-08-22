@@ -9,7 +9,12 @@
  http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<bean name="emp" class="com.samples.S01Basic.Employee" p:id="1"
-		p:name="subi" />
+		p:name="subi" >
+		<property name="address">
+			<bean class="com.samples.S01Basic.Address"
+				p:houseNumber="187" p:street="main street" p:city="TY" />
+		</property>
+		</bean>
 
 	<bean name="Hospital" class="com.samples.S01Basic.Hospital">
 		<property name="name" value="GH"></property>
@@ -47,6 +52,22 @@
 		p:name="mouse" p:price="1000.0" p:quantity="1" />
 	<bean name="shoppingcart"
 		class="com.samples.S01Basic.Shoppingcart" p:iteam-ref="iteam" />
+
+	<bean name="scores" class="com.samples.S01Basic.Scores"
+		p:maths="99" p:chemistry="98" p:physics="95" />
+	<bean name="student" class="com.samples.S01Basic.Student"
+		p:scores-ref="scores" />
+		
+	<!--Way 1  -->	
+	<!-- <bean name="patient" class="com.samples.S01Basic.Patient" p:id="11" 
+		init-method="methodOne" destroy-method="methodTwo" /> -->
+
+	<bean name="patient" class="com.samples.S01Basic.Patient"
+		p:id="11"/>
+ 
+ 
+		<bean
+			class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
 
 
 </beans>
